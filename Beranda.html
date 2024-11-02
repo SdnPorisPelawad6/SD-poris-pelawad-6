@@ -30,14 +30,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem; /* Mengurangi padding */
     position: relative;
 }
+
 
 .logo-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    margin-left: 5px; /* Jarak dari tepi kiri */
 }
 
 .logo-img {
@@ -48,9 +50,10 @@ body {
 }
 
 .logo-text {
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* Ukuran yang sedikit lebih besar */
     font-weight: bold;
     color: white;
+    white-space: nowrap; /* Memastikan teks tetap satu baris */
 }
 
 /* Navigation Links */
@@ -64,7 +67,7 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    font-size: 16px; /* Ubah ukuran font jadi sedikit lebih besar */
+    font-size: 14px; /* Ubah ukuran font jadi sedikit lebih besar */
 }
 
 .nav-links a:hover {
@@ -264,17 +267,16 @@ body {
 }
 /* Responsive Styles */
 @media (max-width: 768px) {
-    /* Navbar */
     .nav-links {
         display: none;
         flex-direction: column;
         position: fixed;
         top: 60px;
-        right: 20px;
+        right: 10px;
         background-color: #708e7a;
         padding: 10px;
         border-radius: 8px;
-        z-index: 9999; /* Memastikan elemen di atas elemen lainnya */
+        z-index: 9999;
     }
 
     .nav-links.active {
@@ -283,6 +285,14 @@ body {
 
     .hamburger {
         display: flex;
+    }
+
+    .logo-container {
+        margin-left: 10px; /* Sesuaikan lagi untuk tampilan mobile */
+    }
+
+    .logo-text {
+        font-size: 1rem; /* Ukuran font lebih kecil agar tetap satu baris */
     }
 
     /* Adjust Hero Section */
